@@ -34,7 +34,7 @@ body {
 .text-hello h2>span {
     color: #36d3b7;
     font-size: 2.3rem;
-    animation: show 0.8s alternate infinite;
+    animation: show 0.7s alternate infinite;
 }
 
 .info p {
@@ -46,9 +46,9 @@ body {
 }
 
 
-.info i {
+.bi-chevron-double-down {
     font-size: 1.2rem;
-    animation: chevron 0.8s alternate infinite;
+    animation: show 1s alternate infinite;
 }
 
 .about {
@@ -57,16 +57,7 @@ body {
 
 
 @keyframes show {
-    0% {
-        color: white;
-    }
-
-    100% {
-        color: #36d3b7;
-    }
-}
-
-@keyframes chevron {
+    
     0% {
         opacity: 0%;
     }
@@ -75,6 +66,7 @@ body {
         opacity: 100%;
     }
 }
+
 
 .project {
     width: 100%;
@@ -85,23 +77,22 @@ body {
     text-align: justify;
 }
 
-.tt p>span {
+.tt p > span {
     color: #36d3b7;
 }
 
-.hh {
+.tt a {
+    text-decoration: none;
+}
+
+.text-hello h2:hover {
     animation-name: tada;
-    animation-duration: 5s;
+    animation-duration: 1s;
     animation-fill-mode: both;
-    animation-iteration-count: infinite;
 }
 
-.desc {
-    transition: 1s;
-}
-
-.desc:hover {
-    transform: scale(1.1);
+.rtx .img img {
+    animation: float 4s infinite;
 }
 
 .carousel-inner {
@@ -110,6 +101,17 @@ body {
 
 .rty {
     width: 700px;
+}
+
+.end-text {
+    animation: show 0.6s alternate infinite;
+    font-size: 1.7rem;
+}
+
+.bi-github {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1201px) {
@@ -162,4 +164,16 @@ body {
     100% {
         transform: scale3d(1, 1, 1);
     }
+}
+
+@keyframes float {
+    0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
