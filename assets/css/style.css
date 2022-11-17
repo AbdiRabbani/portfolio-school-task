@@ -5,12 +5,42 @@
 
 * {
     font-family: 'Nunito';
+    overflow-x: hidden;
+}
+
+h1 {
+    overflow: hidden;
 }
 
 body {
     width: 100vw;
     height: auto;
-    overflow-x: hidden;
+    cursor: url('/assets/img/cursor.cur') 50 50, auto !important;
+}
+
+.floating-button {
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: -500px;
+    background: #36d3b7;
+    transition: 1s;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.floating-button i {
+    margin-top: -10px;
+}
+
+.floating-button-on-scroll {
+    bottom: 50px;
 }
 
 .home {
@@ -27,15 +57,15 @@ body {
     background: #36d3b7;
 }
 
+
+
+/* Navbar */
+
 .navbar {
     transition: 1s;
 }
 
-.text-hello h2>span {
-    color: #36d3b7;
-    font-size: 2.3rem;
-    animation: show 0.7s alternate infinite;
-}
+
 
 .info p {
     font-size: 1.1rem;
@@ -45,28 +75,42 @@ body {
     color: black;
 }
 
+/* home */
+
+.text-hello h2>span {
+    color: #36d3b7;
+    font-size: 2.3rem;
+    animation: show 0.7s alternate infinite;
+}
+
+.text-hello h2 {
+    animation-name: tada;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
 
 .bi-chevron-double-down {
     font-size: 1.2rem;
     animation: show 1s alternate infinite;
 }
 
+/* About */
+
 .about {
     width: 100%;
 }
 
-
-@keyframes show {
-    
-    0% {
-        opacity: 0%;
-    }
-
-    100% {
-        opacity: 100%;
-    }
+.rtx .img img {
+    animation: float 4s infinite;
 }
 
+/* Skill */
+
+.skill {
+    width: 100%;
+}
+
+/* Project */
 
 .project {
     width: 100%;
@@ -77,7 +121,7 @@ body {
     text-align: justify;
 }
 
-.tt p > span {
+.tt p>span {
     color: #36d3b7;
 }
 
@@ -85,17 +129,8 @@ body {
     text-decoration: none;
 }
 
-.text-hello h2:hover {
-    animation-name: tada;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-.rtx .img img {
-    animation: float 4s infinite;
-}
-
 .carousel-inner {
+    height: auto;
     border-radius: 5px;
 }
 
@@ -105,7 +140,7 @@ body {
 
 .end-text {
     animation: show 0.6s alternate infinite;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
 }
 
 .bi-github {
@@ -113,6 +148,86 @@ body {
     display: flex;
     cursor: pointer;
 }
+
+/* Footer */
+
+.img-footer {
+    width: 100%;
+    margin-bottom: -1%;
+    margin-top: 100px;
+}
+
+.footer {
+    background: #36d3b7;
+    color: white;
+    padding: 0px 8px;
+    padding-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-content div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    justify-content: center;
+    display: flex;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: white;
+    padding: 0px 8px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.footer-content li {
+    list-style: none;
+    display: flex;
+    margin: 6% 0%;
+}
+
+.footer-content li img {
+    width: 10%;
+}
+
+.footer-content div:nth-child(2) div {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 1.8%;
+}
+
+.footer-content div:nth-child(2) div p {
+    padding: 0px 10px;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.footer-content div:nth-child(2) div iframe {
+    width: 50%;
+    height: 80%;
+    display: flex;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    padding: 20px 0px;
+}
+
+/* Media Query */
 
 @media screen and (max-width: 1201px) {
     .tt {
@@ -131,12 +246,54 @@ body {
     }
 }
 
+@media screen and (max-width: 940px) {
+    .footer-content h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        width: 37%;
+    }
+
+    .footer-content div:nth-child(2) div iframe {
+        width: 100%;
+    }
+
+    .footer-content div:nth-child(2) div {
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 770px) {
     .pppd {
         width: 100%;
         /* margin-left: 20%; */
     }
+
+    .footer-content h1 {
+        font-size: 1rem;
+    }
+
+    .footer-content a {
+        font-size: 0.6rem;
+    }
+
+    .footer-content li {
+        align-items: center;
+    }
+
+    .footer-content li img {
+        width: 5%;
+    }
+
+    .footer-content div:nth-child(2) div p {
+        font-size: 0.6rem;
+     }
+
+     .footer-copyright p{
+        font-size: 0.7rem;
+    }
 }
+
+/* Keyframes */
 
 @keyframes tada {
     0% {
@@ -168,12 +325,25 @@ body {
 
 @keyframes float {
     0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@keyframes show {
+
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
