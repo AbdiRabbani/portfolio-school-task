@@ -16,6 +16,7 @@ h5 {
     overflow: hidden;
 }
 
+
 body {
     width: 100vw;
     height: auto;
@@ -247,7 +248,7 @@ body {
 }
 
 .footer-content div:nth-child(2) div iframe {
-    width: 50%;
+    width: 70%;
     height: 80%;
     display: flex;
 }

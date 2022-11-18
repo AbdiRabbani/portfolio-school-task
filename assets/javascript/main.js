@@ -17,18 +17,18 @@ const icon3 = document.querySelector('.three')
 
 window.addEventListener('scroll', e => {
     if (window.scrollY > 70) {
-        icon.style.left = '-50%';
-        icon2.style.right = '-50%';
-        icon3.style.right = '-50%';
+        icon.style.top = '-50%';
+        icon2.style.top = '-50%';
+        icon3.style.top = '-50%';
         navHeader.classList.add('on-scroll')
         navHeader.classList.add('navbar-dark')
         floating.classList.add('floating-button-on-scroll')
     } else {
-        icon.style.left = '20vw';
-        icon2.style.right = '20vw';
-        icon3.style.right = '35vw';
+        icon.style.top = '30vh';
+        icon2.style.top = '60vh';
+        icon3.style.top = '20vh';
         navHeader.classList.remove('on-scroll')
         navHeader.classList.remove('navbar-dark')
         floating.classList.remove('floating-button-on-scroll')
-    }
+    };
 });
