@@ -143,6 +143,30 @@ body {
     width: 100%;
 }
 
+.c-2:hover img{
+    animation: turn 1s alternate;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(95deg);
+
+    }
+    50% {
+        transform: rotate(180deg);
+
+    }
+    75% {
+        transform: rotate(275deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Project */
 
 .project {
@@ -229,6 +253,12 @@ body {
     list-style: none;
     display: flex;
     margin: 6% 0%;
+    transition: 1s;
+}
+
+.footer-content li:hover {
+    transform: translateY(-10px);
+    z-index: 999;
 }
 
 .footer-content li img {
